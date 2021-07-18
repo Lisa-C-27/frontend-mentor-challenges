@@ -348,3 +348,10 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+# Avoid accidental uploads of Sketch Figma XD and ds_store files
+*.sketch
+*.fig
+*.xd
+.DS_Store
+.prettierignore
