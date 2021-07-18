@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/stats-preview-card-using-html-and-css-Q7RcC0Ozg](https://www.frontendmentor.io/solutions/stats-preview-card-using-html-and-css-Q7RcC0Ozg)
 - Live Site URL: [https://lisa-c-27.github.io/frontend-mentor-challenges/stats-preview-card-component-main/index.html](https://lisa-c-27.github.io/frontend-mentor-challenges/stats-preview-card-component-main/index.html)
 
 ## My process
