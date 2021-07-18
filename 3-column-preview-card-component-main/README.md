@@ -30,7 +30,8 @@ Users should be able to:
 
 ### Links
 
-- URL: [https://lisa-c-27.github.io/frontend-mentor-challenges/3-column-preview-card-component-main/index.html](https://lisa-c-27.github.io/frontend-mentor-challenges/3-column-preview-card-component-main/index.html)
+- Solution URL: [https://www.frontendmentor.io/solutions/3-column-card-component-using-html-and-css-b0nlVsBXZ](https://www.frontendmentor.io/solutions/3-column-card-component-using-html-and-css-b0nlVsBXZ)
+- Live URL: [https://lisa-c-27.github.io/frontend-mentor-challenges/3-column-preview-card-component-main/index.html](https://lisa-c-27.github.io/frontend-mentor-challenges/3-column-preview-card-component-main/index.html)
 
 ## My process
 
