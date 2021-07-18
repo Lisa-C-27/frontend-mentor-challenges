@@ -1,0 +1,154 @@
+/* CSS reset for elements in this project */
+html, body, div, section, h2, p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* Set base styles */
+:root {
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --darkcyan: hsl(179, 100%, 13%);
+    --transwhite: hsla(0, 0%, 100%, 0.75);
+    --lightgrey: hsl(0, 0%, 95%);
+}
+
+body {
+    font-size: 15px;
+    background-color: #e8e8e8;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+}
+
+p {
+    color: var(--transwhite);
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: var(--lightgrey);
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2.7em;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;   
+}
+
+section {
+    padding: 20px;
+}
+
+.section-boxed {
+    background-color: var(--lightgrey);
+    padding: 80px 20px;
+}
+
+.button {
+    border-radius: 50px;
+    background-color: var(--lightgrey);
+    padding: 10px 30px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    border: 2px solid var(--lightgrey);
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Card styles */
+.cards-container {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card {
+    padding: 50px 40px;
+}
+
+.card-orange {
+    background-color: var(--orange);
+}
+
+.card-cyan {
+    
+    background-color: var(--cyan);
+}
+.card-darkcyan {
+    background-color: var(--darkcyan);
+}
+
+.card img {
+    margin-bottom: 20px;
+}
+
+.card-orange .button {
+    color: var(--orange);
+}
+
+.card-cyan .button {
+    color: var(--cyan);
+}
+
+.card-darkcyan .button {
+    color: var(--darkcyan);
+}
+
+.card .button:hover, .card .button:active, .card .button:focus {
+    background-color: transparent;
+    color: var(--lightgrey);
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Attribution styles */
+.attribution {
+    padding: 20px;
+}
+.attribution a {
+    color: var(--cyan);
+}
+
+/* Media queries */
+@media only screen and (min-width: 1024px) {
+    section {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .section-boxed {
+        border-radius: 3px;
+        -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+                box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        overflow: hidden;
+        margin: 100px auto;
+        padding: 150px 20px;
+    }
+
+    .cards-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        max-width: 970px;
+        margin: 0 auto;
+    }
+
+    .card {
+        padding: 50px;
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+    }
+
+    .card .button {
+        margin-top: 50px;
+    }
+
+}
