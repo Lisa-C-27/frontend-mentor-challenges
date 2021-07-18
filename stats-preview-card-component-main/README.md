@@ -26,12 +26,12 @@ Users should be able to:
 
 ![](./desktop-screenshot.jpg)
 
-<img src="./mobile-screenshot" width="400" alt="mobile screenshot"/>
+<img src="./mobile-screenshot.png" width="400" alt="mobile screenshot"/>
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://lisa-c-27.github.io/frontend-mentor-challenges/stats-preview-card-component-main/index.html](https://lisa-c-27.github.io/frontend-mentor-challenges/stats-preview-card-component-main/index.html)
 
 ## My process
 
