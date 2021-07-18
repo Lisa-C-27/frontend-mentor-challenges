@@ -1,0 +1,57 @@
+html, body, div, section, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* Set base styles */
+:root {
+    --color_primary: #011C27;
+    --color_secondary: #0F6385;
+    --color_background: #e1e1e1;
+    --color_white: #fff;
+}
+
+body {
+    font-size: 15px;
+    background-color: var(--color_background);
+    font-family: 'Helvatica', sans-serif;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+p {
+    color: var(--color_primary);
+    margin-bottom: 20px;
+}
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--color_white);
+}
+h2 {
+    font-size: 1.8em;
+}
+ul {
+    margin-left: 20px;
+}
+a {
+    color: var(--color_secondary);
+}
+
+header {
+    background-color: var(--color_primary);
+    padding: 20px;
+}
+.centred {
+    text-align: center;
+}
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    background-color: var(--color_white);
+}
