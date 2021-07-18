@@ -1,4 +1,4 @@
-html, body, div, section, h1, h2, p, ul, li {
+html, body, div, section, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
     border: 0;
@@ -27,17 +27,30 @@ p {
     color: var(--color_primary);
     margin-bottom: 20px;
 }
+
 h1 {
     font-size: 2em;
     font-weight: bold;
     color: var(--color_white);
 }
+
 h2 {
     font-size: 1.8em;
+    margin-bottom: 10px;
 }
+
+h3 {
+    font-size: 1.3em;
+    color: var(--color_secondary);
+    background-color: var(--color_background);
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
 ul {
     margin-left: 20px;
 }
+
 a {
     color: var(--color_secondary);
 }
@@ -46,9 +59,11 @@ header {
     background-color: var(--color_primary);
     padding: 20px;
 }
+
 .centred {
     text-align: center;
 }
+
 section {
     max-width: 1200px;
     margin: 0 auto;
