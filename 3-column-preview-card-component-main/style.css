@@ -62,6 +62,10 @@ section {
     transition: all 0.3s ease-in-out;
 }
 
+.centred {
+    text-align: center;
+}
+
 /* Card styles */
 .cards-container {
     border-radius: 10px;
@@ -111,6 +115,8 @@ section {
 /* Attribution styles */
 .attribution {
     padding: 20px;
+    color: var(--darkcyan);
+    margin-bottom: 0;
 }
 .attribution a {
     color: var(--cyan);
@@ -128,8 +134,8 @@ section {
         -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.2);
                 box-shadow: 0 0 10px rgba(0,0,0,0.2);
         overflow: hidden;
-        margin: 100px auto;
-        padding: 150px 20px;
+        margin: 20px auto;
+        padding: 140px 20px;
     }
 
     .cards-container {
