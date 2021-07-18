@@ -30,8 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- URL: [https://lisa-c-27.github.io/frontend-mentor-challenges/3-column-preview-card-component-main/index.html](https://lisa-c-27.github.io/frontend-mentor-challenges/3-column-preview-card-component-main/index.html)
 
 ## My process
 
