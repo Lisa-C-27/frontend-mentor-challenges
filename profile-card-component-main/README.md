@@ -26,7 +26,7 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/profile-card-component-html-css-flexbox-ork2g91xG](https://www.frontendmentor.io/solutions/profile-card-component-html-css-flexbox-ork2g91xG)
 - Live Site URL: [https://lisa-c-27.github.io/frontend-mentor-challenges/profile-card-component-main/index.html](https://lisa-c-27.github.io/frontend-mentor-challenges/profile-card-component-main/index.html)
 
 ## My process
