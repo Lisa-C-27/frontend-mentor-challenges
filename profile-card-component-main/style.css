@@ -1,0 +1,143 @@
+/* CSS reset for elements in this project */
+html, body, div, section, h2, p, ul, li, span {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+:root {
+    --darkcyan: hsl(185, 75%, 39%);
+    --darkblue: hsl(229, 23%, 23%);
+    --greyblue: hsl(227, 10%, 46%);
+    --darkgrey: hsl(0, 0%, 59%);
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 400;
+    color: var(--darkblue);
+    background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+    background-position: left -100vw top -50vh, right -100vw bottom -40vh;
+    background-repeat: no-repeat;
+    background-color: var(--darkcyan);
+    background-size: 80vh;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px);
+}
+
+footer {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.card {
+    text-align: center;
+    max-width: 400px;
+    margin: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #fff;
+    width: 100%;
+    position: relative;
+}
+
+.card img {
+    border-radius: 50%;
+    border: 5px solid #fff;
+    margin: 80px 0 -60px;
+}
+
+.profile-pic-container {
+    background: url(./images/bg-pattern-card.svg) no-repeat center;
+    background-size: cover;
+    margin-bottom: 90px;
+    width: 100%;
+}
+
+.profile-info {
+    width: 100%;
+    padding-bottom: 30px;
+    border-bottom: 1px solid hsla(0, 0%, 59%, 0.3);
+}
+
+.profile-stats {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 30px 20px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+h2 span {
+    font-weight: 400;
+    color: var(--greyblue);
+}
+
+p {
+    color: var(--darkgrey);
+    font-size: 0.9em;
+}
+
+footer p {
+    color: #fff;
+    line-height: 1.1;
+}
+
+footer a {
+    color: var(--darkblue);
+}
+
+.profile-stats li span {
+    display: block;
+}
+
+.stat-number {
+    font-weight: 700;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.stat {
+    font-size: 0.7em;
+    color: var(--greyblue);
+    letter-spacing: 1px;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        background-position: left -65vw top -25vh, right -55vw bottom -35vh
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    body {
+        background-position: left -5vw top -30vh, right -5vw bottom -30vh;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    body {
+        background-position: left -5vw top -40vh, right -5vw bottom -45vh;
+        background-size: 100vh;
+    }
+}
