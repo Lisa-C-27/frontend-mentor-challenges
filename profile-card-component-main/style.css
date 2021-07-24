@@ -1,5 +1,5 @@
 /* CSS reset for elements in this project */
-html, body, div, section, h2, p, ul, li, span {
+html, body, div, section, h2, p, ul, li, span, footer, main {
     margin: 0;
     padding: 0;
     border: 0;
@@ -40,7 +40,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
     text-align: center;
 }
 
@@ -96,6 +95,7 @@ h2 span {
 p {
     color: var(--darkgrey);
     font-size: 0.9em;
+    padding: 10px;
 }
 
 footer p {
