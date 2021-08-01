@@ -44,7 +44,7 @@ h3 {
     color: var(--color_secondary);
     background-color: var(--color_background);
     padding: 5px 10px;
-    margin-bottom: 10px;
+    margin: 20px 0 10px;
 }
 
 ul {

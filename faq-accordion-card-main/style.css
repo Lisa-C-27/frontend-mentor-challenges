@@ -1,0 +1,62 @@
+/* CSS reset for elements in this project */
+html, body, div, section, h1, h2, p, span, footer, main, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(180deg, hsl(273, 75%, 66%) 0%, hsl(240, 73%, 65%) 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 12px;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 400;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    color: hsl(238, 29%, 16%);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    color: hsl(240, 6%, 50%);
+    line-height: 1.5;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 50px 25px;
+    margin: 25px;
+}
+
+.accordion {
+    border-bottom: 2px solid hsla(240, 5%, 91%, 0.5);
+    padding: 20px 0;
+}
+
+.accordion-title {
+    font-size: 1.1em;  
+    color: hsl(238, 29%, 16%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-content {
+    height: 0;
+    overflow: hidden;
+}
