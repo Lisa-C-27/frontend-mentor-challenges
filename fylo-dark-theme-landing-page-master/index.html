@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./style.css" media="all">
+  <title>Frontend Mentor | Fylo landing page with dark theme and features grid</title>
+
+</head>
+<body>
+  <header id="header">
+    <img src="./images/logo.svg" width="180" alt="Fylo logo">
+    <nav aria-label="Primary navigation">
+      <ul role="menu" aria-label="Main menu">
+        <li role="menuitem"><a href="#">Features</a></li>
+        <li role="menuitem"><a href="#">Team</a></li>
+        <li role="menuitem"><a href="#">Sign In</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="hero-banner">
+      <div class="background-waves">
+        <img src="./images/illustration-intro.png" width="720" alt="Illustration">
+      </div> 
+      <div class="content">
+        <h1>All your files in one secure location, accessible anywhere.</h1>
+        <p>Fylo stores all your most important files in one secure location. Access them wherever 
+          you need, share and collaborate with friends family, and co-workers.</p>
+        <a href="#get-started" class="button">Get Started</a>
+      </div>
+    </section>
+    <section class="icon-boxes">
+      <div class="icon-box animate">
+        <img src="./images/icon-access-anywhere.svg" width="60" alt="Any device">
+        <h2>Access your files, anywhere</h2>
+        <p>The ability to use a smartphone, tablet, or computer to access your account means your 
+          files follow you everywhere.</p>
+      </div>
+      <div class="icon-box animate">
+        <img src="./images/icon-security.svg" width="60" alt="Security">
+        <h2>Security you can trust</h2>
+        <p>2-factor authentication and user-controlled encryption are just a couple of the security 
+          features we allow to help secure your files.</p>
+      </div>
+      <div class="icon-box animate">
+        <img src="./images/icon-collaboration.svg" width="60" alt="Collaboration">
+        <h2>Real-time collaboration</h2>
+        <p>Securely share files and folders with friends, family and colleagues for live collaboration. 
+          No email attachments required.</p>
+      </div>
+      <div class="icon-box animate">
+        <img src="./images/icon-any-file.svg" width="60" alt="Any file">
+        <h2>Store any type of file</h2>
+        <p>Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all 
+          file types to be securely stored and shared.</p>
+      </div>
+    </section>
+    <section class="illustration-with-text animate">
+      <img src="./images/illustration-stay-productive.png" width="615" alt="Stay productive">
+      <div class="content">
+        <h2>Stay productive, wherever you are</h2>
+        <p>Never let location be an issue when accessing your files. Fylo has you covered for all of your file 
+          storage needs.</p>
+        <p>Securely share files and folders with friends, family and colleagues for live collaboration. No email 
+          attachments required.</p>
+        <div>
+          <a href="#" class="link-icon"><span>See how Fylo works</span><img src="./images/icon-arrow.svg" width="16" height="16"></a>
+        </div>
+      </div>
+    </section>
+    <section class="testimonials animate">
+      <div class="testimonial">
+        <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
+          become a well-oiled collaboration machine.</p>
+          <div class="testimonial-customer-box">
+            <img src="./images/profile-1.jpg" width="25" height="25" alt="Customer 1">
+            <div class="testimonial-customer">
+              <p class="testimonial-name">Satish Patel</p>
+              <p class="testimonial-position">Founder & CEO, Huddle</p>
+            </div>
+          </div>
+      </div>
+      <div class="testimonial">
+        <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
+          become a well-oiled collaboration machine.</p>
+          <div class="testimonial-customer-box">
+            <img src="./images/profile-2.jpg" width="25" height="25" alt="Customer 2">
+            <div class="testimonial-customer">
+              <p class="testimonial-name">Bruce McKenzie</p>
+              <p class="testimonial-position">Founder & CEO, Huddle</p>
+            </div>
+          </div>
+      </div>
+      <div class="testimonial">
+        <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
+          become a well-oiled collaboration machine.</p>
+          <div class="testimonial-customer-box">
+            <img src="./images/profile-3.jpg" width="25" height="25" alt="Customer 3">
+            <div class="testimonial-customer">
+              <p class="testimonial-name">Iva Boyd</p>
+              <p class="testimonial-position">Founder & CEO, Huddle</p>
+            </div>
+          </div>
+      </div>
+    </section>
+    <section class="sign-up">
+      <div class="sign-up-container animate">
+        <h2>Get early access today</h2>
+        <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any 
+          questions, our support team would be happy to help you.</p>
+          <form id="sign-up">
+            <div>
+              <input id="email" type="text" placeholder="email@example.com">
+              <span id="error-message"></span>
+            </div>
+            <input type="button" class="button" value="Get Started For Free" onclick="validateEmail();">
+          </form>
+          </div>
+    </section>
+  </main>
+  <footer>
+    <img src="./images/logo.svg" width="180" alt="Fylo logo">
+    <div class="footer-cols">
+      <div class="col-1">
+        <div class="icon-box-inline">
+          <img src="./images/icon-location.svg" width="18" alt="map pin">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+            dolore magna aliqua</p>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="icon-box-inline">
+          <img src="./images/icon-phone.svg" width="18" alt="phone">
+          <p><a href="tel:+15431234567">+1-543-123-4567</a></p>
+        </div>
+        <div class="icon-box-inline">
+          <img src="./images/icon-email.svg" width="18" alt="email">
+          <p><a href="mailto:example@fylo.com">example@fylo.com</a></p>
+        </div>
+      </div>   
+      <div class="col-3">
+        <ul role="menu" aria-label="Footer menu 1" class="footer-menu">
+          <li role="menuitem"><a href="#">About Us</a></li>
+          <li role="menuitem"><a href="#">Jobs</a></li>
+          <li role="menuitem"><a href="#">Press</a></li>
+          <li role="menuitem"><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="col-4">
+        <ul role="menu" aria-label="Footer menu 2" class="footer-menu">
+          <li role="menuitem"><a href="#">Contact Us</a></li>
+          <li role="menuitem"><a href="#">Terms</a></li>
+          <li role="menuitem"><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+      <div class="col-5">
+        <ul class="social-links">
+          <li><a href="https://facebook.com" target="_blank"><span class="sr-only">Facebook</span><svg viewBox="0 0 24 24" width="24px" height="24px"><path d="M17.525,9H14V7c0-1.032,0.084-1.682,1.563-1.682h1.868v-3.18C16.522,2.044,15.608,1.998,14.693,2 C11.98,2,10,3.657,10,6.699V9H7v4l3-0.001V22h4v-9.003l3.066-0.001L17.525,9z"/></svg></a></li>
+          <li><a href="https://twitter.com" target="_blank"><span class="sr-only">Twitter</span><svg viewBox="0 0 30 30" width="30px" height="30px"><path d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z"/></svg></a></li>
+          <li><a href="https://instagram.com" target="_blank"><span class="sr-only">Instagram</span><svg viewBox="0 0 24 24" width="24px" height="24px"><path d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="attribution">
+      <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
+      <p>Coded by <a href="https://www.frontendmentor.io/profile/Lisa-C-27" target="_blank">Lisa Clark</a>.</p>
+  </footer>
+  <script src="./script.js"></script>
+</body>
+</html>
