@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/faq-accordion-using-html-css-and-javascript-FMoErBLwk](https://www.frontendmentor.io/solutions/faq-accordion-using-html-css-and-javascript-FMoErBLwk)
 - Live Site URL: [https://lisa-c-27.github.io/frontend-mentor-challenges/faq-accordion-card-main/index.html](https://lisa-c-27.github.io/frontend-mentor-challenges/faq-accordion-card-main/index.html)
 
 ## My process
