@@ -45,6 +45,7 @@ Users should be able to:
 ### Useful resources
 
 - [Grid Layout Generator](https://grid.layoutit.com/) - A grid layout generator, I used this to initially setup the grid for this project, but then modified it within my code to make adjustments as required
+- [CSS Tricks - Grid guide](https://css-tricks.com/snippets/css/complete-guide-grid/) -  A complete guide to CSS grid by CSS Tricks
 
 
 ## Author
