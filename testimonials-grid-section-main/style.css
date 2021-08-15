@@ -34,14 +34,12 @@ h2 {
 }
 
 .container {
+  display: grid;
   padding: 55px 25px;
   max-width: 500px;
   margin: 0 auto;
-}
-
-.grid {
-  display: grid;
   gap: 25px;
+  grid-template-rows: auto;
 }
 
 article {
@@ -111,43 +109,33 @@ footer {
 
 @media only screen and (min-width: 768px) {
   article {
-    padding: 25px 36px 35px;
+      padding: 25px 35px 35px;
   }
 
   .container {
-    grid-template-areas: "left" "right";
-    max-width: 885px;
-    grid-template-rows: auto;
-    padding: 7% 25px;
+      grid-template-areas: "top-left top-left top-right"
+      "bottom-left bottom-right bottom-right"
+      "far-right far-right far-right";
+      grid-template-columns: repeat(3, 1fr); 
+      grid-template-rows: auto; 
+      max-width: 885px;
+      padding: 7% 25px;
   }
 
-  .left {
-    grid-template-areas: "top top" "bottom bottom";
-    grid-area: left;
-  }
-
-  .right {
-    grid-area: right;
-  }
-
-  .top {
-    grid-template-columns: 2.1fr 1fr;
-    grid-area: top;
-    grid-template-rows: auto;
-  }
-
-  .bottom {
-    grid-template-columns: 1fr 2.1fr;
-    grid-area: bottom;
-  }
+  .top-left { grid-area: top-left; }
+  .top-right { grid-area: top-right; }
+  .bottom-left { grid-area: bottom-left; }
+  .bottom-right { grid-area: bottom-right; }
+  .far-right { grid-area: far-right; }
 }
 
 @media only screen and (min-width: 1200px) {
 
   .container {
-      grid-template-columns: 3fr 1fr;
-      grid-template-areas: "left right";
       max-width: 1160px;
+      grid-template-areas: "top-left top-left top-right far-right"
+      "bottom-left bottom-right bottom-right far-right"; 
+      grid-template-columns: repeat(4, 1fr); 
   }
 
 }
