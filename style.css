@@ -1,10 +1,11 @@
-html, body, div, section, h1, h2, h3, p, ul, li {
+html, body, div, section, h1, h2, h3, h4, p, ul, li {
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    box-sizing: border-box;
 }
 
 /* Set base styles */
@@ -18,25 +19,27 @@ html, body, div, section, h1, h2, h3, p, ul, li {
 body {
     font-size: 15px;
     background-color: var(--color_background);
-    font-family: 'Helvatica', sans-serif;
-    font-weight: 400;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 100;
     line-height: 1.8;
 }
 
 p {
     color: var(--color_primary);
     margin-bottom: 20px;
+    font-size: 1em;
 }
 
 h1 {
     font-size: 2em;
-    font-weight: bold;
+    font-weight: 500;
     color: var(--color_white);
 }
 
 h2 {
     font-size: 1.8em;
     margin-bottom: 10px;
+    font-weight: 500;
 }
 
 h3 {
@@ -45,14 +48,46 @@ h3 {
     background-color: var(--color_background);
     padding: 5px 10px;
     margin: 20px 0 10px;
+    font-weight: 500;
 }
 
-ul {
-    margin-left: 20px;
+h4 {
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 1.4;
 }
 
 a {
     color: var(--color_secondary);
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 33.33%;
+    padding: 20px;
+    text-align: center;
+}
+
+.card a > img {
+    height: 200px;
+    object-fit: cover;
+    object-position: top center;
+    width: 100%;
+}
+
+.card a {
+    display: block;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    overflow: hidden;
+}
+.card-content {
+    padding: 20px;
 }
 
 header {
@@ -69,4 +104,50 @@ section {
     margin: 0 auto;
     padding: 80px 20px;
     background-color: var(--color_white);
+}
+
+.button {
+    background-color: var(--color_secondary);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.button img {
+    width: 18px;
+    margin-left: 10px;
+}
+
+.built-with {
+    margin-bottom: 0;
+}
+
+.date {
+    font-size: 0.9em;
+}
+
+@media only screen and (max-width: 1200px) {
+    .card {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .card {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .card {
+        width: 100%;
+    }
+    section {
+        padding: 30px 5px;
+    }
 }

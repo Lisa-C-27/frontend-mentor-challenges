@@ -3,28 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./style.css" media="all">
   <title>Lisa Clark | Frontend Mentor Challenges</title>
 </head>
 <body>
     <header>
         <h1 class="centred">Frontend Mentor Challenges completed by Lisa Clark</h1>
-    </header>
+    </header> 
     <section>
         <h2>Challenges</h2>
         <h3>Level 1 - Newbie</h3>
-        <ul>
-            <li><a href="./3-column-preview-card-component-main/index.html" target="_blank">3-column preview card component</a> [HTML, CSS, flex] - Completed 18 July 2021</li>
-            <li><a href="./stats-preview-card-component-main/index.html" target="_blank">Stats preview card component</a> [HTML, CSS, flex] - Completed 18 July 2021</li>
-            <li><a href="./profile-card-component-main/index.html">Profile card component</a> [HTML, CSS, flex] - Completed 24 July 2021</li>
-            <li><a href="./faq-accordion-card-main/index.html">FAQ accordion card</a> [HTML, CSS, JS, flex] - Completed 8 Aug 2021</li>
-        </ul>
+        <div class="flex cards-container">
+            <div class="card">
+                <a href="./3-column-preview-card-component-main/index.html" target="_blank">
+                    <img src="./3-column-preview-card-component-main/screenshot-desktop-view.png" alt="screenshot for 3 column preview card" width="400">
+                    <div class="card-content">
+                        <h4>3-column preview card component</h4> 
+                        <p class="built-with">[HTML, CSS, flex]</p> 
+                        <p class="date">Completed 18 July 2021</p>
+                        <div class="button"><span>View project</span> <img src="./images/double_arrow_white_24dp.svg"></div>
+                    </div>
+                </a>           
+            </div>           
+             <div class="card">
+                <a href="./stats-preview-card-component-main/index.html" target="_blank">
+                    <img src="./stats-preview-card-component-main/desktop-screenshot.jpg" alt="screenshot for stats preview card" width="400">
+                    <div class="card-content">
+                        <h4>Stats preview card component</h4>
+                        <p class="built-with">[HTML, CSS, flex]</p>
+                        <p class="date">Completed 18 July 2021</p>
+                        <div class="button"><span>View project</span> <img src="./images/double_arrow_white_24dp.svg"></div>
+                    </div>
+                </a>     
+            </div>
+            <div class="card">      
+                <a href="./profile-card-component-main/index.html" target="_blank"> 
+                    <img src="./profile-card-component-main/screenshot-desktop.jpg" alt="screenshot for profile card" width="400">
+                    <div class="card-content">
+                        <h4>Profile card component</h4>
+                        <p class="built-with">[HTML, CSS, flex]</p>
+                        <p class="date">Completed 24 July 2021</p>
+                        <div class="button"><span>View project</span> <img src="./images/double_arrow_white_24dp.svg"></div>
+                    </div>         
+                </a>
+            </div>
+            <div class="card">
+                <a href="./faq-accordion-card-main/index.html" target="_blank">
+                    <img src="./faq-accordion-card-main/screenshot-1440w.png" alt="screenshot for faq accordion card" width="400">
+                    <div class="card-content">                
+                        <h4>FAQ accordion card</h4>
+                        <p class="built-with">[HTML, CSS, JS, flex]</p>
+                        <p class="date">Completed 8 Aug 2021</p>
+                        <div class="button"><span>View project</span> <img src="./images/double_arrow_white_24dp.svg"></div>
+                    </div>
+                </a>
+            </div>      
+        </div>
         <h3>Level 2 - Junior</h3>
-        <ul>
-            <li><a href="./sunnyside-agency-landing-page-main/index.html" target="_blank">Sunnyside Agency landing page</a> [HTML, CSS, JS, flex] - Completed 1 August 2021</li>
-            <li><a href="./fylo-dark-theme-landing-page-master/index.html" target="_blank">Fylo Dark Theme landing page</a> [HTML, CSS, JS, flex] - Completed 9 August 2021</li>
-            <li><a href="./testimonials-grid-section-main/index.html" target="_blank">Testimonials Grid Section</a> [HTML, CSS, flex, grid] - Completed 15 August 2021</li>
-        </ul>
+        <div class="flex cards-container">
+            <div class="card">
+                <a href="./sunnyside-agency-landing-page-main/index.html" target="_blank">
+                    <img src="./sunnyside-agency-landing-page-main/screenshot-desktop.jpg" alt="screenshot for sunnyside agency landing" width="400">
+                    <div class="card-content">
+                        <h4>Sunnyside Agency landing page</h4> 
+                        <p class="built-with">[HTML, CSS, JS, flex]</p> 
+                        <p class="date">Completed 1 August 2021</p>
+                        <div class="button"><span>View project</span> <img src="./images/double_arrow_white_24dp.svg"></div>
+                    </div>
+                </a>           
+            </div>
+            <div class="card">
+                <a href="./fylo-dark-theme-landing-page-master/index.html" target="_blank">
+                    <img src="./fylo-dark-theme-landing-page-master/screenshot-1440.jpg" alt="screenshot for fylo landing page" width="400">
+                    <div class="card-content">
+                        <h4>Fylo Dark Theme landing page</h4> 
+                        <p class="built-with">[HTML, CSS, JS, flex]</p> 
+                        <p class="date">Completed 9 August 2021</p>
+                        <div class="button"><span>View project</span> <img src="./images/double_arrow_white_24dp.svg"></div>
+                    </div>
+                </a>           
+            </div>
+            <div class="card">
+                <a href="./testimonials-grid-section-main/index.html" target="_blank">
+                    <img src="./testimonials-grid-section-main/screenshot-desktop-1440.png" alt="screenshot for testimonials grid" width="400">
+                    <div class="card-content">
+                        <h4>Testimonials Grid Section</h4> 
+                        <p class="built-with">[HTML, CSS, flex, grid]</p> 
+                        <p class="date">Completed 15 August 2021</p>
+                        <div class="button"><span>View project</span> <img src="./images/double_arrow_white_24dp.svg"></div>
+                    </div>
+                </a>           
+            </div>
+        </div>
     </section>
 </body>
 </html>
