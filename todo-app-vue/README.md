@@ -32,7 +32,7 @@ Users should be able to:
 
 ![](./src/assets/desktop-image.jpg)
 
-<img src="./src/assets/mobile-image.jpg" width="375" alt="Mobile screenshot">
+<img src="./src/assets/phone-image.jpg" width="375" alt="Mobile screenshot">
 
 ### Links
 
