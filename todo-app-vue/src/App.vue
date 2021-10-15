@@ -4,7 +4,6 @@
     <main>
       <todo-create></todo-create>
       <todo-list></todo-list>
-      <todo-filter></todo-filter>
     </main>
   </div>
 </template>
@@ -13,7 +12,6 @@
 import TheHeader from "./components/TheHeader.vue";
 import TodoCreate from "./components/TodoCreate.vue";
 import TodoList from "./components/TodoList.vue";
-import TodoFilter from "./components/TodoFilter.vue";
 
 export default {
   name: "App",
@@ -21,7 +19,6 @@ export default {
     TheHeader,
     TodoCreate,
     TodoList,
-    TodoFilter,
   },
   data() {
     return {
@@ -34,8 +31,20 @@ export default {
   methods: {
     updateMode(mode) {
       this.currentMode = mode;
+      const modeJson = JSON.stringify(mode);
+      localStorage.setItem('mode', modeJson);
     },
   },
+  mounted() {
+    if(localStorage.getItem('mode')) {
+      try {  
+        const mode = JSON.parse(localStorage.getItem('mode'));
+        this.currentMode = mode;
+      } catch(e) {
+        localStorage.removeItem('mode');
+      }
+    }
+  }
 };
 </script>
 
@@ -68,6 +77,7 @@ body {
 
 .main-container {
   min-height: 100vh;
+  padding-bottom: 2rem;
 }
 
 main {
@@ -80,8 +90,16 @@ main {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 1px solid hsl(237, 14%, 26%);
+  background: hsl(237, 14%, 26%);
   margin-right: 0.7rem;
+  padding: 1px;
+  transition: all 0.3s linear;
+}
+
+.circle-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,6 +119,10 @@ main {
   color: hsl(234, 39%, 85%);
 }
 
+.dark_mode .circle-inner {
+  background-color: hsl(235, 24%, 19%);
+}
+
 .dark_mode .form-control {
   background-color: hsl(235, 24%, 19%);
 }
@@ -118,7 +140,22 @@ main {
   background-color: hsl(0, 0%, 98%);
 }
 
+.light_mode .circle-inner {
+  background-color: hsl(0, 0%, 98%);
+}
+
 .light_mode .circle {
-  border: 1px solid hsl(236, 33%, 92%);
+  background: hsl(236, 33%, 92%);
+}
+
+@media only screen and (min-width: 600px) {
+  .form-control {
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  .circle {
+    width: 22px;
+    height: 22px;
+  }
 }
 </style>

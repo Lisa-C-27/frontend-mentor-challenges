@@ -4,7 +4,7 @@
       <h1>Todo</h1>
       <div>
         <label for="toggle-mode" aria-label="Toggle light and dark mode"></label>
-        <input type="checkbox" id="toggle-mode" @change="toggleMode" />
+        <input type="checkbox" id="toggle-mode" @change="toggleMode" :checked="currentMode.light_mode"/>
       </div>
     </div>
   </header>
@@ -16,11 +16,13 @@ export default {
   data() {
     return {
       toggleState: false,
+      currentMode: []
     };
   },
   methods: {
     toggleMode() {
       this.toggleState = !this.toggleState;
+      localStorage.setItem('toggleState', this.toggleState);
       this.$emit("mode-toggled", this.modeClasses);
     },
   },
@@ -32,6 +34,24 @@ export default {
       };
     },
   },
+  mounted() {
+    if(localStorage.getItem('mode')) {
+      try {  
+        const mode = JSON.parse(localStorage.getItem('mode'));
+        this.currentMode = mode;
+        console.log(mode);
+      } catch(e) {
+        localStorage.removeItem('mode');
+      }
+    }
+    if(localStorage.getItem('toggleState')) {
+      try {  
+        this.toggleState = localStorage.getItem('toggleState');
+      } catch(e) {
+        localStorage.removeItem('toggleState');
+      }
+    }
+  }
 };
 </script>
 
@@ -68,6 +88,7 @@ label {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 /* Dark Mode */
 .dark_mode header {
@@ -85,5 +106,14 @@ label {
 
 .light_mode label {
   background-image: url(../assets/icon-moon.svg);
+}
+
+@media only screen and (min-width: 600px) {
+  .dark_mode header {
+    background-image: url(../assets/bg-desktop-dark.jpg);
+  }
+  .light_mode header {
+    background-image: url(../assets/bg-desktop-light.jpg);
+  }
 }
 </style>
