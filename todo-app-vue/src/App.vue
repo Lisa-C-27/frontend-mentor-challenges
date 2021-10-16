@@ -4,6 +4,7 @@
     <main>
       <todo-create></todo-create>
       <todo-list></todo-list>
+      <undo-popup v-if="undoVisible"></undo-popup>
     </main>
   </div>
 </template>
@@ -12,6 +13,7 @@
 import TheHeader from "./components/TheHeader.vue";
 import TodoCreate from "./components/TodoCreate.vue";
 import TodoList from "./components/TodoList.vue";
+import UndoPopup from './components/UndoPopup.vue';
 
 export default {
   name: "App",
@@ -19,6 +21,7 @@ export default {
     TheHeader,
     TodoCreate,
     TodoList,
+    UndoPopup,
   },
   data() {
     return {
@@ -27,6 +30,11 @@ export default {
         light_mode: false,
       },
     };
+  },
+  computed: {
+    undoVisible() {
+      return this.$store.getters.undoVisible;
+    }
   },
   methods: {
     updateMode(mode) {
@@ -108,7 +116,7 @@ main {
 .form-control {
   display: flex;
   padding: 1rem;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   letter-spacing: 0.5px;
   align-items: center;
 }

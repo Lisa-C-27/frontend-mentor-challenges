@@ -5,7 +5,10 @@ const store = createStore({
     return {
       toDos: [],
       filter: 'All',
-      currentTaskNumber: 0
+      currentTaskNumber: 0,
+      previousTaskList: [],
+      undoVisible: false,
+      clearedTasks: 0
     }
   },
   getters: {
@@ -17,6 +20,15 @@ const store = createStore({
     },
     taskNumber(state) {
       return state.currentTaskNumber;
+    },
+    previousTasks(state) {
+      return state.previousTaskList;
+    },
+    undoVisible(state) {
+      return state.undoVisible;
+    },
+    clearedTasks(state) {
+      return state.clearedTasks;
     }
   },
   actions: {
@@ -26,6 +38,8 @@ const store = createStore({
       context.commit('updateSaved');
     },
     removeToDo(context, payload) {
+      const tasks = context.getters.toDosList;
+      context.commit('savePreviousTasks', tasks);
       context.commit('removeToDo', payload);
       context.commit('updateSaved');
     },
@@ -33,18 +47,15 @@ const store = createStore({
       context.commit('updateToDo', payload);
       context.commit('updateSaved');
     },
-    updateFilter(context, payload) {
-      context.commit('updateFilter', payload);
-    },
     clearCompletedTodos(context, payload) {
       context.commit('clearCompleted', payload);
       context.commit('updateSaved');
     },
-    addSavedToDos(context, payload) {
-      context.commit('addSavedToDoList',  payload );
-    },
-    replaceTaskNumber(context, payload) {
-      context.commit('replaceTaskNumber', payload);
+    undoTaskDeletion(context) {
+      const tasks = context.getters.previousTasks;
+      console.log('context.getters');
+      console.log(tasks);
+      context.commit('undoTaskDeletion', tasks);
     }
   },
   mutations: {
@@ -52,7 +63,9 @@ const store = createStore({
       state.toDos.push(payload);
     },
     removeToDo(state, payload) {
-      state.toDos.splice(payload, 1);
+      const filterList = state.toDos.filter(item => item.taskID !== payload);
+      state.toDos = filterList;
+      state.clearedTasks = 1;
     },
     updateToDo(state, payload) {
       const todo = state.toDos.findIndex(item => item.taskID === payload);
@@ -62,7 +75,9 @@ const store = createStore({
       state.filter = payload;
     },
     clearCompleted(state, payload) {
+      const tasks = state.toDos;
       state.toDos = payload;
+      state.clearedTasks = tasks.length - payload.length;
     },
     updateSaved(state) {
       const data = state.toDos;
@@ -78,8 +93,28 @@ const store = createStore({
     },
     replaceTaskNumber(state, payload) {
       state.currentTaskNumber = payload;
+    },
+    savePreviousTasks(state, payload) {
+      state.previousTaskList = payload;
+      console.log('savePreviousTasks payload');
+      console.log(payload);
+    },
+    undoTaskDeletion(state, payload) {
+      state.toDos = payload;
+      const data = state.toDos;
+      const jsonData = JSON.stringify(data);
+      localStorage.setItem('tasks', jsonData);
+      state.previousTaskList = [];
+      state.clearedTasks = 0;
+      state.undoVisible = false;
+    },
+    updateUndoVisible(state, payload) {
+      state.undoVisible = payload;
+      setTimeout(function() {
+          state.undoVisible = false;
+      }, 8000);
     }
-  }
+  },
 });
 
 export default store;

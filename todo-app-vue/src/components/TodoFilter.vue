@@ -32,6 +32,7 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex';
 export default {
   computed: {
     activeItems() {
@@ -51,13 +52,17 @@ export default {
   },
   methods: {
     filter(items) {
-      this.$store.dispatch("updateFilter", items);
+      this.updateFilter(items);
     },
     clearCompleted() {
       const activeTodos = this.activeItems;
+      const all = this.allItems;
+      this.savePreviousTasks(all);
       this.$store.dispatch('clearCompletedTodos', activeTodos);
-      this.$store.dispatch("updateFilter", 'All');
-    }
+      this.updateFilter('All');
+      this.updateUndoVisible(true);
+    },
+    ...mapMutations(['updateUndoVisible', 'updateFilter', 'savePreviousTasks']),
   },
 };
 </script>

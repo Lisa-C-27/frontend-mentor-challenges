@@ -25,7 +25,7 @@
               @change="toggleCompleted(element.taskID)"
             />
             <span>{{ element.value }}</span>
-            <div class="complete-task"  @click="removeTask(index)">
+            <div class="complete-task"  @click="removeTask(element.taskID)">
               <img src="../assets/icon-cross.svg"/>
             </div>
           </div>
@@ -46,6 +46,7 @@
 <script>
 import draggable from "vuedraggable";
 import TodoFilter from './TodoFilter.vue';
+import { mapMutations } from 'vuex';
 export default {
   components: {
     draggable,
@@ -76,7 +77,7 @@ export default {
     if(localStorage.getItem('tasks')) {
       try {
         const savedTasks = JSON.parse(localStorage.getItem('tasks'));
-        this.$store.dispatch("addSavedToDos", savedTasks);
+        this.addSavedToDoList(savedTasks);
       } catch(e) {
         localStorage.removeItem('tasks');
       }
@@ -86,11 +87,14 @@ export default {
   methods: {
     toggleCompleted(taskID) {
       this.$store.dispatch("updateToDo", taskID);
-      console.log(this.$store.getters.toDosList);
     },
-    removeTask(index) {
-      this.$store.dispatch("removeToDo", index);
+    removeTask(taskId) {
+      const todos = this.todosList;
+      this.savePreviousTasks(todos);
+      this.$store.dispatch("removeToDo", taskId);
+      this.updateUndoVisible(true);
     },
+    ...mapMutations(['updateUndoVisible', 'addSavedToDoList', 'savePreviousTasks']),
   },
 };
 </script>

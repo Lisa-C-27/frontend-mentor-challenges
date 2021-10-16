@@ -39,7 +39,6 @@ export default {
       try {  
         const mode = JSON.parse(localStorage.getItem('mode'));
         this.currentMode = mode;
-        console.log(mode);
       } catch(e) {
         localStorage.removeItem('mode');
       }

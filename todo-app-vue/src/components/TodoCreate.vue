@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex';
 export default {
   emits: ["added-todos"],
   data() {
@@ -35,12 +36,14 @@ export default {
       });
       this.todoval = "";
     },
+    ...mapMutations(['replaceTaskNumber'])
   },
   mounted() {
     if(localStorage.getItem('taskCounter')) {
       try {
-        const counter = localStorage.getItem('taskCounter');
-        this.$store.dispatch("replaceTaskNumber", counter);
+        const counter = parseInt(localStorage.getItem('taskCounter'));
+        // this.$store.dispatch("replaceTaskNumber", counter);
+        this.replaceTaskNumber(counter);
       } catch(e) {
         localStorage.removeItem('taskCounter');
       }
@@ -62,7 +65,7 @@ input {
   border: none;
   outline: none;
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   width: calc(100% - (20px + 0.7rem));
   height: 20px;
   caret-color: hsl(220, 98%, 61%);
