@@ -69,6 +69,10 @@ header {
   justify-content: space-between;
 }
 
+.header-container div {
+  position: relative;
+}
+
 h1 {
   text-transform: uppercase;
   font-size: 1.4rem;
@@ -77,7 +81,11 @@ h1 {
 }
 
 input[type="checkbox"] {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  width: 20px;
+  height: 20px;
+  top: 0;
 }
 
 label {

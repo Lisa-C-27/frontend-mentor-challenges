@@ -100,8 +100,14 @@ export default {
 </script>
 
 <style scoped>
+.circle {
+  position: relative;
+}
 input[type="checkbox"] {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  height: 20px;
+  width: 20px;
 }
 
 .form-control label img {
