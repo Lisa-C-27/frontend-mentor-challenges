@@ -123,4 +123,14 @@ label {
     background-image: url(../assets/bg-desktop-light.jpg);
   }
 }
+
+@media only screen and (min-width: 1024px) {
+  header {
+    padding: 7em 1.2em;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
 </style>

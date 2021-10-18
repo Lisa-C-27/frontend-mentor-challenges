@@ -138,6 +138,7 @@ input[type="checkbox"] {
   border-radius: 5px;
   margin: 1rem 0 0;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
 ul {
