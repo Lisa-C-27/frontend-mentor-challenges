@@ -4,8 +4,8 @@ module.exports = {
     : '/',
     pwa: {
       name: 'Todo App',
-      themeColor: 'purple',
-      msTileColor: '#000000',
+      themeColor: '#161722',
+      msTileColor: '#161722',
       appleMobileWebAppCapable: 'yes',
       appleMobileWebAppStatusBarStyle: 'black',
   
