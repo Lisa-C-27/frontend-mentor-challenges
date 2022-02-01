@@ -69,6 +69,10 @@ header {
   justify-content: space-between;
 }
 
+.header-container div {
+  position: relative;
+}
+
 h1 {
   text-transform: uppercase;
   font-size: 1.4rem;
@@ -77,7 +81,11 @@ h1 {
 }
 
 input[type="checkbox"] {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  width: 20px;
+  height: 20px;
+  top: 0;
 }
 
 label {
@@ -113,6 +121,16 @@ label {
   }
   .light_mode header {
     background-image: url(../assets/bg-desktop-light.jpg);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  header {
+    padding: 7em 1.2em;
+  }
+
+  h1 {
+    font-size: 1.8rem;
   }
 }
 </style>

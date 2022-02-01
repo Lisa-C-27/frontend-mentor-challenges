@@ -1,18 +1,21 @@
 <template>
 <div v-if="todosList != ''">
-  <ul class="todo-items">
+  <div class="todo-items">
     <draggable
+      tag="ul"
       :list="filteredTodosList"
       item-key="taskID"
       ghost-class="ghost"
       @start="dragging = true"
       @end="dragging = false"
+      preventOnFilter=false
+      filter=".ignore-drag"
     >
       <template #item="{element, index}">
         <li :class="{ complete: element.complete === true }">
           <div class="form-control">
             <label
-              class="circle"
+              class="circle ignore-drag"
               :for="'checkbox-' + index"
               :aria-label="'Mark task ' + element.value + ' as completed'"
             ><div class="circle-inner">
@@ -20,12 +23,13 @@
               </div>
             </label>
             <input
+              class="ignore-drag"
               type="checkbox"
               :id="'checkbox-' + index"
               @change="toggleCompleted(element.taskID)"
             />
             <span>{{ element.value }}</span>
-            <div class="complete-task"  @click="removeTask(element.taskID)">
+            <div class="complete-task ignore-drag"  @click="removeTask(element.taskID)">
               <img src="../assets/icon-cross.svg"/>
             </div>
           </div>
@@ -33,7 +37,7 @@
       </template>
     </draggable>
     <todo-filter></todo-filter>
-  </ul>
+  </div>
   <div class="drag-text" v-if="todosList.length > 1">
     <p>Drag and drop to reorder list</p>
   </div>
@@ -100,8 +104,15 @@ export default {
 </script>
 
 <style scoped>
+.circle {
+  position: relative;
+}
 input[type="checkbox"] {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
 }
 
 .form-control label img {
@@ -123,12 +134,15 @@ input[type="checkbox"] {
   opacity: 0.5;
 }
 
-ul {
+.todo-items {
   border-radius: 5px;
   margin: 1rem 0 0;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  list-style-type: none;
   position: relative;
+}
+
+ul {
+  list-style-type: none;
 }
 
 li span {
