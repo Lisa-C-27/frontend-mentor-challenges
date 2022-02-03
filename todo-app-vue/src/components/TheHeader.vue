@@ -86,6 +86,7 @@ input[type="checkbox"] {
   width: 20px;
   height: 20px;
   top: 0;
+  cursor: pointer;
 }
 
 label {

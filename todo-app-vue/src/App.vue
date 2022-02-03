@@ -1,5 +1,6 @@
 <template>
   <div :class="currentMode" class="main-container">
+    <button class="add-button">Add to home screen</button>
     <the-header @mode-toggled="updateMode($event)"></the-header>
     <main>
       <todo-create></todo-create>
@@ -119,6 +120,15 @@ main {
   font-size: 0.7rem;
   letter-spacing: 0.5px;
   align-items: center;
+}
+
+.add-button {
+  width: 100%;
+  background-color: #fff;
+  padding: 1em;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 10px rgb(0 0 0 / 80%);
 }
 
 /* Dark mode */

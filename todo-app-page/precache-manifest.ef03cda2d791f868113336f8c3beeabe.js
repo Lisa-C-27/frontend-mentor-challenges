@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "249af3f3b4a61276ce13",
-    "url": "/frontend-mentor-challenges/todo-app-page/css/app.50c447b8.css"
+    "revision": "0c0763cf6c9d1de23de4",
+    "url": "/frontend-mentor-challenges/todo-app-page/css/app.2cca0c15.css"
   },
   {
     "revision": "02105f02a8dba33f6c8bafac6a9b0979",
@@ -36,16 +36,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/frontend-mentor-challenges/todo-app-page/img/icon-sun.b3182f3b.svg"
   },
   {
-    "revision": "29024ac7d27cbe93642815d0d3babc3b",
+    "revision": "2a31f8c64694693101f06729d78a0b9b",
     "url": "/frontend-mentor-challenges/todo-app-page/index.html"
   },
   {
-    "revision": "249af3f3b4a61276ce13",
-    "url": "/frontend-mentor-challenges/todo-app-page/js/app.9d31c579.js"
+    "revision": "0c0763cf6c9d1de23de4",
+    "url": "/frontend-mentor-challenges/todo-app-page/js/app.29842bdd.js"
   },
   {
-    "revision": "56a18450c69bacd0a5ae",
-    "url": "/frontend-mentor-challenges/todo-app-page/js/chunk-vendors.ac572a9b.js"
+    "revision": "9ae225cd7f9d18221b9d",
+    "url": "/frontend-mentor-challenges/todo-app-page/js/chunk-vendors.8de2ff2b.js"
   },
   {
     "revision": "aff38b0c7ee7d668d41efc1ff5261ecf",
@@ -54,5 +54,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
     "url": "/frontend-mentor-challenges/todo-app-page/robots.txt"
+  },
+  {
+    "revision": "6a39317af8b027c0a3afe9b4e350f3d7",
+    "url": "/frontend-mentor-challenges/todo-app-page/script.js"
   }
 ]);
