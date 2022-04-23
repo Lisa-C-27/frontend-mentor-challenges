@@ -15,7 +15,9 @@
   </div>
   <div class="game-status">
     <h3>{{ didPlayerWin }}</h3>
-    <button @click="startNewGame">Play again</button>
+    <div class="play-again">
+      <button @click="startNewGame">Play again</button>
+    </div>
   </div>
 </template>
 
@@ -108,11 +110,31 @@ h3 {
     hsla(237, 49%, 15%, 0.25) 80%, hsla(237, 49%, 15%, 0.25) 100%);
   border-radius: 50%;
   position: absolute;
+  top: -68px;
+  left: -70px;
+  width: 230px;
+  height: 230px;
+  z-index: -1;
+}
+
+.game-results.basic .choice_player:before {
   top: -80px;
   left: -85px;
   width: 300px;
   height: 300px;
-  z-index: -1;
+}
+
+.play-again {
+  text-align: center;
+  padding: 20px;
+}
+
+.play-again button {
+  padding: 10px 20px;
+  background-color: #fff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
 }
 
 </style>

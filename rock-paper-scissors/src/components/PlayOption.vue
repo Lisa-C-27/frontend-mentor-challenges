@@ -67,6 +67,12 @@ div.basic::before {
   z-index: -1;
 }
 
+div.extra ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
 /* li {
   display: flex;
   justify-content: center;

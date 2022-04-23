@@ -1,4 +1,5 @@
 <template>
+<div class="main-game">
   <choose-game v-if="isGameSelectVisible"></choose-game>
   <div v-else>
     <button @click="back">&#8592; <span>Back to game select</span></button>
@@ -6,6 +7,7 @@
     <play-option v-if="!isGameResultsVisible"></play-option>
     <game-results v-else></game-results>
   </div>
+</div>
 </template>
 
 <script>
@@ -140,6 +142,10 @@ img {
 .spock {
   background: linear-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
   box-shadow: 0px 5px 0 hsl(189, 58%, 46%);
+}
+.main-game {
+  max-width: 600px;
+  margin: auto;
 }
 </style>
 
